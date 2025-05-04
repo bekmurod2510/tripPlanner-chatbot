@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Chat Placement</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    #chat-container {
+      width: 100%;
+      height: 600px; /* Adjust height as needed */
+      position: relative;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    df-messenger {
+      width: 100%;
+      height: 100%;
+    }
+
+    df-messenger[chat-icon="false"] {
+      bottom: unset !important;
+      right: unset !important;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome to Travel Planner</h1>
+
+<div id="chat-container">
+  <df-messenger
+          chat-icon="false"
+          intent="WELCOME"
+          chat-title="TravelPlannerAgent"
+          agent-id="4eb6799b-5201-431e-97d6-764d4d493074"
+          language-code="en"
+  ></df-messenger>
+</div>
+
+</body>
+</html>
